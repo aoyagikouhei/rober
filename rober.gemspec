@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Rober::VERSION
   spec.authors       = ["aoyagikouhei"]
   spec.email         = ["aoyagi.kouhei@gmail.com"]
-  spec.description   = %q{ober reader}
+  spec.description   = %q{object browser er file reader}
   spec.summary       = %q{ober reader}
   spec.homepage      = ""
   spec.license       = "MIT"
@@ -21,4 +21,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
+  spec.add_dependency "nokogiri"
 end

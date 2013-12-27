@@ -5,7 +5,11 @@ describe Rober do
     Rober::VERSION.should_not be_nil
   end
 
-  it 'should do something useful' do
-    false.should be_true
+  it 'read edm' do
+    ober = Rober::Reader.read(FILE)
+    entities = ober[:entities]
+    expect(entities.size).to eq(2)
+    expect(entities[0].attributes.size).to eq(3)
+    expect(entities[1].attributes.size).to eq(2)
   end
 end
