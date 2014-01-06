@@ -3,7 +3,7 @@ require 'nokogiri'
 module Rober
   class Reader
     def self.read(path)
-      doc = Nokogiri::XML(File.read(path))
+      doc = Nokogiri::XML(file_read(path))
       entities = []
       doc.xpath('/ERD/ENTITY').each do |it|
         entity = Rober::Entity.new
@@ -25,6 +25,11 @@ module Rober
         entities << entity
       end
       {entities: entities}
+    end
+
+    def self.file_read(path)
+      res = File.read(path)
+      res.gsub(/\r\n/, "&#10;")
     end
   end
 end

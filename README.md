@@ -30,5 +30,8 @@ TODO: Write usage instructions here
 
 ## Changes
 
+2014-01-06 0.0.2
+modify CRLF to "and charp 10 semicolon"
+
 2013-12-27 0.0.1
 first release

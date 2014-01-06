@@ -11,5 +11,6 @@ describe Rober do
     expect(entities.size).to eq(2)
     expect(entities[0].attributes.size).to eq(3)
     expect(entities[1].attributes.size).to eq(2)
+    expect(entities[0].comment).to match(/\n/)
   end
 end
