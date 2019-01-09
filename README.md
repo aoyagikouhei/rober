@@ -30,6 +30,9 @@ TODO: Write usage instructions here
 
 ## Changes
 
+2018-01-10 0.0.3
+add dbm file for pgmodeler
+
 2014-01-06 0.0.2
 modify CRLF to "and charp 10 semicolon"
 
