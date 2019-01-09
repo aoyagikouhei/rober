@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.9.1-beta" last-position="0,0" last-zoom="1"
+	 default-schema="public" default-owner="postgres">
+<database name="test">
+</database>
+
+<schema name="public" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="companies">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment><![CDATA[aaa
+bbb]]></comment>
+	<position x="240" y="140"/>
+	<column name="uuid" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="name" not-null="true" default-value="''">
+		<type name="text" length="0"/>
+	</column>
+	<column name="created_at" not-null="true" default-value="current_timestamp">
+		<type name="timestamptz" length="0"/>
+	</column>
+	<constraint name="companies_pk" type="pk-constr" table="public.companies">
+		<columns names="uuid" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="users">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="480" y="140"/>
+	<column name="uuid" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="name" not-null="true" default-value="''">
+		<type name="text" length="0"/>
+	</column>
+	<column name="created_at" not-null="true" default-value="current_timestamp">
+		<type name="timestamptz" length="0"/>
+	</column>
+	<column name="company_uuid">
+		<type name="uuid" length="0"/>
+	</column>
+	<constraint name="users_pk" type="pk-constr" table="public.users">
+		<columns names="uuid" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+</dbmodel>
