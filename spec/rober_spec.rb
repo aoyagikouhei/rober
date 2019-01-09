@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Rober do
   it 'should have a version number' do
-    Rober::VERSION.should_not be_nil
+    expect(Rober::VERSION).to be
   end
 
   it 'read edm' do
