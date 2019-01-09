@@ -3,10 +3,9 @@ require 'nokogiri'
 module Rober
   class Reader
     def self.read(path)
-      path = path.downcase
-      if path.end_with?("edm")
+      if path.downcase.end_with?("edm")
         read_edm(path)
-      elsif path.end_with?("dbm")
+      elsif path.downcase.end_with?("dbm")
         read_dbm(path)
       else
         {}
