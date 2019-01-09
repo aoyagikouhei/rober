@@ -3,6 +3,7 @@ require 'nokogiri'
 module Rober
   class Reader
     def self.read(path)
+      path = path.downcase
       if path.end_with?("edm")
         read_edm(path)
       elsif path.end_with?("dbm")
@@ -51,7 +52,7 @@ module Rober
         entity.logical_name = it[:name]
         entity.physical_name = it[:name]
         list = it.xpath('./comment/text()')
-        entity.comment = list.first.content unless list.empty?
+        entity.comment = list.empty? ? '' : list.first.content
         list = it.xpath('constraint[@type="pk-constr"]')
         pk_ary = []
         unless list.empty?

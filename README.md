@@ -30,6 +30,9 @@ TODO: Write usage instructions here
 
 ## Changes
 
+2018-01-10 0.0.4
+fix comment nil and path downcase
+
 2018-01-10 0.0.3
 add dbm file for pgmodeler
 
