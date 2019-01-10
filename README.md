@@ -30,6 +30,9 @@ TODO: Write usage instructions here
 
 ## Changes
 
+2018-01-10 0.0.6
+fix dbm primary keys
+
 2018-01-10 0.0.5
 fix path
 

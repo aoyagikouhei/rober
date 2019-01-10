@@ -44,11 +44,11 @@ bbb]]></comment>
 	<column name="created_at" not-null="true" default-value="current_timestamp">
 		<type name="timestamptz" length="0"/>
 	</column>
-	<column name="company_uuid">
+	<column name="company_uuid" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
 	<constraint name="users_pk" type="pk-constr" table="public.users">
-		<columns names="uuid" ref-type="src-columns"/>
+		<columns names="uuid,company_uuid" ref-type="src-columns"/>
 	</constraint>
 </table>
 

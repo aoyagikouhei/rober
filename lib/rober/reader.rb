@@ -55,7 +55,7 @@ module Rober
         list = it.xpath('constraint[@type="pk-constr"]')
         pk_ary = []
         unless list.empty?
-          pk_ary = list.first.xpath('columns').map{|col| col[:names]}
+          pk_ary = list.first.xpath('columns').map{|col| col[:names].split(/,/)}.flatten
         end
         it.xpath('column').each do |attr|
           type_tag = attr.xpath('./type').first
